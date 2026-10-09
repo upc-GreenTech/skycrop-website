@@ -33,6 +33,12 @@ document.querySelectorAll('[data-open-dialog]').forEach((control) => {
     document.querySelector('#' + control.dataset.openDialog).showModal();
   });
 });
+document.querySelectorAll('[data-open-platform]').forEach((control) => {
+  control.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.location.href='https://skycrop-website.vercel.app/home';
+  });
+});
 document.querySelectorAll('[data-close-dialog]').forEach((control) => {
   control.addEventListener('click', () => {
     control.closest('dialog').close();
